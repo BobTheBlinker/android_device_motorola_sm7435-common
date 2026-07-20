@@ -1,5 +1,5 @@
 <manifest version="1.0" type="device">
-    <hal format="hidl">
+    <hal format="hidl" override="true">
         <name>android.hardware.biometrics.fingerprint</name>
         <transport>hwbinder</transport>
         <version>2.1</version>
@@ -10,18 +10,5 @@
         </interface>
         <fqname>@2.1::IBiometricsFingerprint/default</fqname>
         <fqname>@2.3::IBiometricsFingerprint/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>com.motorola.hardware.biometric.fingerprint</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IMotoFingerPrint</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
-            <name>IMotoFingerPrintSensorTest</name>
-            <instance>default</instance>
-        </interface>
     </hal>
 </manifest>

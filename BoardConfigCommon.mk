@@ -71,6 +71,7 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 BOARD_BOOT_HEADER_VERSION := 4
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE += \
+    firmware_class.path=/vendor/firmware_mnt/image \
     printk.devkmsg=on
 BOARD_BOOTCONFIG += \
     androidboot.hardware=qcom \
@@ -141,11 +142,14 @@ TARGET_KERNEL_EXT_MODULES += \
     motorola/drivers/misc/awinic/sarsensor \
     motorola/drivers/misc/stk501xx \
     motorola/drivers/misc/sx937x \
+    motorola/drivers/misc/pen \
     motorola/drivers/input/touchscreen/touchscreen_mmi \
     motorola/drivers/input/touchscreen/focaltech_0flash_v2_mmi \
     motorola/drivers/input/touchscreen/ili9882_mmi \
     motorola/drivers/input/touchscreen/goodix_berlin_mmi \
+    motorola/drivers/input/touchscreen/nova_0flash_mmi \
     motorola/drivers/input/misc/anc_fps_mmi \
+    motorola/drivers/input/misc/ets_bix_mmi \
     motorola/drivers/input/misc/fpc_fps_mmi \
     motorola/drivers/input/misc/goodix_fod_mmi \
     motorola/drivers/moto_netopt/con_dfpar \
@@ -166,7 +170,7 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
 -include vendor/lineage/config/BoardConfigReservedSize.mk
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 134217728
+BOARD_RECOVERYIMAGE_PARTITION_SIZE ?= 134217728
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_BUILD_VENDOR_RAMDISK_IMAGE := true
 BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -207,10 +211,21 @@ PRODUCT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
+
+ifneq (,$(AVB_CUSTOM_KEY_PATH))
+BOARD_AVB_ALGORITHM := $(AVB_CUSTOM_ALGORITHM)
+BOARD_AVB_KEY_PATH := $(AVB_CUSTOM_KEY_PATH)
+else
+AVB_CUSTOM_ALGORITHM := SHA256_RSA2048
+AVB_CUSTOM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
+endif
+
+ifneq ($(WITH_AVB),true)
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
+endif
 BOARD_AVB_VBMETA_SYSTEM := system system_ext product
-BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
-BOARD_AVB_VBMETA_SYSTEM_ALGORITHM := SHA256_RSA2048
+BOARD_AVB_VBMETA_SYSTEM_ALGORITHM := $(AVB_CUSTOM_ALGORITHM)
+BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := $(AVB_CUSTOM_KEY_PATH)
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
 BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true

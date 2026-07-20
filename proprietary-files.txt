@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from 15 V1UQS35H.103-16-9 5d30fe-55e2ef release-keys.
+# All unpinned blobs below are extracted from 16 W1UAN36H.29-25 a3ee7a-ab45e7 release-keys.
 
 # ADSP
 vendor/bin/adsprpcd
@@ -209,7 +209,6 @@ vendor/lib64/libhdr_tm.so
 
 # Display - HWC
 vendor/lib64/libmemutils.so
-vendor/lib64/libvmmem.so
 
 # Display - SDM
 vendor/etc/display/DPU660.xml
@@ -225,6 +224,7 @@ vendor/etc/display/advanced_sf_offsets.xml
 vendor/etc/display/thermallevel_to_fps.xml
 vendor/lib64/libdisplayqos.so
 vendor/lib64/libdisplayskuutils.so
+vendor/lib64/libgame_enhance.so
 vendor/lib64/libqseed3.so
 vendor/lib64/librcmask.so
 vendor/lib64/libsdm-color.so
@@ -337,6 +337,9 @@ vendor/lib64/vendor.qti.esepowermanager@1.1.so
 # Euicc
 product/etc/permissions/privapp-permissions-com.google.android.euicc.xml
 product/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED
+
+# Fingerprint
+vendor/etc/vintf/manifest/manifest_IMoto_Fingerprint.xml
 
 # FM
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
@@ -615,6 +618,10 @@ vendor/lib64/libqmiservices.so
 vendor/lib64/libsmemlog.so
 vendor/lib64/libsubsystem_control.so
 
+# QSPA
+system_ext/etc/init/qspa_system.rc
+system_ext/etc/qspa/qspa_default.rc
+
 # QSPM
 vendor/bin/vendor.qti.qspmhal@1.0-service
 vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc
@@ -646,7 +653,6 @@ vendor/app/IWlanService/IWlanService.apk
 vendor/bin/hw/qcrilNrd
 vendor/bin/adpl
 vendor/bin/ks
-vendor/bin/mbm_spy
 vendor/bin/netmgrd
 vendor/bin/pd-mapper
 vendor/bin/port-bridge
@@ -681,60 +687,7 @@ vendor/etc/qcril_database/upgrade/config/6.0_config.sql;FILEGROUP=proprietary_ri
 vendor/etc/qcril_database/upgrade/config/7.0_config.sql;FILEGROUP=proprietary_rildb_config_sql_files
 vendor/etc/qcril_database/upgrade/config/8.0_config.sql;FILEGROUP=proprietary_rildb_config_sql_files
 vendor/etc/qcril_database/upgrade/config/9.0_config.sql;FILEGROUP=proprietary_rildb_config_sql_files
-vendor/etc/qcril_database/upgrade/ecc/0_initial.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/10_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/11_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/12_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/13_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/14_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/15_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/16_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/17_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/18_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/19_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/20_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/21_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/22_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/23_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/24_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/25_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/26_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/27_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/28_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/29_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/30_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/31_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/33_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/34_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/35_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/36_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/37_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/38_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/39_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/3_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/40_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/41_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/42_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/43_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/44_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/45_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/46_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/47_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/48_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/49_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/4_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/50_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/51_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/52_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/53_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/54_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/55_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/56_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/5_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/6_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/7_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/8_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/9_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
+vendor/etc/qcril_database/upgrade/ecc/mot_generated_ecc_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
 vendor/etc/qcril_database/upgrade/other/2_version_add_wps_config_qcrilnr.sql;FILEGROUP=proprietary_rildb_other_sql_files
 vendor/etc/qcril_database/upgrade/other/3_version_update_wps_config_qcrilnr.sql;FILEGROUP=proprietary_rildb_other_sql_files
 vendor/etc/qcril_database/upgrade/other/6_version_change_property_table_qcrilnr.sql;FILEGROUP=proprietary_rildb_other_sql_files
@@ -862,6 +815,7 @@ system_ext/lib64/libdiag_system.so
 system_ext/lib64/libimscamera_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimscamera_jni.so
 system_ext/lib64/libimsmedia_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so
 system_ext/lib64/vendor.qti.ImsRtpService-V1-ndk.so
+system_ext/lib64/vendor.qti.ImsRtpService-V2-ndk.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
 system_ext/priv-app/ims/ims.apk
@@ -973,6 +927,11 @@ vendor/bin/vendor.qti.hardware.soter@1.0-provision
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
+
+# Synx
+vendor/lib64/libos.so
+vendor/lib64/libsynx.so
+vendor/lib64/libthreadutils.so
 
 # SSGTZ
 vendor/bin/ssgtzd

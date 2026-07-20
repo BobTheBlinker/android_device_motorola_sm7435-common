@@ -1,4 +1,4 @@
-<manifest version="4.0" type="device" target-level="6">
+<manifest version="4.0" type="device" target-level="7">
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
@@ -8,6 +8,11 @@
         <name>android.hardware.audio.effect</name>
         <transport>hwbinder</transport>
         <fqname>@7.0::IEffectsFactory/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.biometrics.fingerprint</name>
+        <transport>hwbinder</transport>
+        <fqname>@2.1::IBiometricsFingerprint/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.bluetooth</name>
@@ -301,5 +306,4 @@
         <transport>hwbinder</transport>
         <fqname>@1.0::IQspmhal/default</fqname>
     </hal>
-    <kernel target-level="6"/>
 </manifest>

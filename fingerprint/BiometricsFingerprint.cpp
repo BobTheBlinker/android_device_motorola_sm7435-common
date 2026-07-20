@@ -14,8 +14,6 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.biometrics.fingerprint@2.3-service.moto_sm7435_fod"
-
 #include "BiometricsFingerprint.h"
 
 #include <android-base/file.h>
@@ -147,6 +145,7 @@ Return<bool> BiometricsFingerprint::isUdfps(uint32_t) {
 }
 
 Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, float) {
+    std::this_thread::sleep_for(std::chrono::milliseconds(200));
     BiometricsFingerprint::enableHighBrightFod();
 
     std::thread([this]() {
