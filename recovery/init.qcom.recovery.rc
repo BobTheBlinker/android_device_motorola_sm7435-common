@@ -43,7 +43,7 @@ on fs
     # Load ADSP firmware for PMIC
     mkdir /firmware
     mount vfat /dev/block/bootdevice/by-name/modem${ro.boot.slot_suffix} /firmware ro context=u:object_r:firmware_file:s0
-	
+
 on post-fs
     insmod /lib/modules/bu520xx_pen.ko
     insmod /lib/modules/ili9882_mmi.ko
