@@ -101,7 +101,10 @@ BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMO
 BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD)
 
 TARGET_KERNEL_EXT_MODULES := \
+    qcom/opensource/securemsm-kernel \
     qcom/opensource/mmrm-driver \
+    qcom/opensource/mm-drivers/msm_ext_display \
+    qcom/opensource/mm-drivers/sync_fence \
     qcom/opensource/audio-kernel \
     qcom/opensource/camera-kernel \
     qcom/opensource/dataipa/drivers/platform/msm \
@@ -115,10 +118,7 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/datarmnet-ext/wlan \
     qcom/opensource/display-drivers/msm \
     qcom/opensource/video-driver \
-    qcom/opensource/securemsm-kernel \
     qcom/opensource/graphics-kernel \
-    qcom/opensource/mm-drivers/msm_ext_display \
-    qcom/opensource/mm-drivers/sync_fence \
     qcom/opensource/bt-kernel \
     qcom/opensource/wlan/qcacld-3.0/.adrastea \
     qcom/opensource/wlan/qcacld-3.0/.qca6750
