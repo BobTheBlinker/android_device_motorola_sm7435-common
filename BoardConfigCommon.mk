@@ -86,7 +86,7 @@ BOARD_USES_GENERIC_KERNEL_IMAGE := true
 TARGET_KERNEL_SOURCE := kernel/motorola/sm7435
 TARGET_KERNEL_CONFIG := \
     gki_defconfig \
-    vendor/parrot_GKI.config \
+    vendor/parrot_perf.config \
     vendor/ext_config/moto-parrot.config \
     vendor/ext_config/moto-parrot-gki.config
 
@@ -104,7 +104,6 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/mmrm-driver \
     qcom/opensource/audio-kernel \
     qcom/opensource/camera-kernel \
-    qcom/opensource/cvp-kernel \
     qcom/opensource/dataipa/drivers/platform/msm \
     qcom/opensource/datarmnet/core \
     qcom/opensource/datarmnet-ext/aps \
@@ -115,8 +114,12 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/datarmnet-ext/sch \
     qcom/opensource/datarmnet-ext/wlan \
     qcom/opensource/display-drivers/msm \
-    qcom/opensource/eva-kernel \
     qcom/opensource/video-driver \
+    qcom/opensource/securemsm-kernel \
+    qcom/opensource/graphics-kernel \
+    qcom/opensource/mm-drivers/msm_ext_display \
+    qcom/opensource/mm-drivers/sync_fence \
+    qcom/opensource/bt-kernel \
     qcom/opensource/wlan/qcacld-3.0/.adrastea \
     qcom/opensource/wlan/qcacld-3.0/.qca6750
 
