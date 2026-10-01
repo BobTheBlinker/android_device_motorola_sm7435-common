@@ -140,6 +140,7 @@ TARGET_KERNEL_EXT_MODULES += \
     motorola/drivers/regulator/dio8015 \
     motorola/drivers/sensors \
     motorola/drivers/input/touchscreen/touchscreen_mmi \
+    motorola/drivers/misc/hall \
     motorola/drivers/input/touchscreen/goodix_berlin_mmi \
     motorola/drivers/input/misc/goodix_fod_mmi \
     motorola/drivers/moto_netopt/con_dfpar
