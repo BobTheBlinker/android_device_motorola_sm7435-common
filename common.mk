@@ -54,12 +54,12 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.0-impl \
     android.hardware.audio.effect@7.0-impl \
-    android.hardware.audio.service \
     android.hardware.bluetooth.audio-impl \
-    android.hardware.soundtrigger@2.3-impl \
     audioadsprpcd \
     audio.bluetooth.default \
-    audio.primary.parrot \
+    audiohalservice.qti \
+    libaudiocorehal.qti \
+    libaudioeffecthal.qti \
     audio.r_submix.default \
     audio.usb.default \
     lib_bt_aptx \
@@ -72,10 +72,9 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libfmpal \
-    sound_trigger.primary.parrot \
-    vendor.qti.hardware.AGMIPC@1.0-service
+    libsoundtriggerhal.qti
 
-AUDIO_HAL_DIR := hardware/qcom-caf/sm8450/audio/primary-hal
+AUDIO_HAL_DIR := hardware/qcom-caf/sm8450-6.6/audio/primary-hal
 
 PRODUCT_COPY_FILES += \
     $(AUDIO_HAL_DIR)/configs/common/codec2/media_codecs_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_audio.xml \
