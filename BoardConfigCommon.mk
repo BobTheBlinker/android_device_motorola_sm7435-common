@@ -107,6 +107,7 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/mm-drivers/sync_fence \
     qcom/opensource/audio-kernel \
     qcom/opensource/camera-kernel \
+    qcom/opensource/datarmnet-ext/mem \
     qcom/opensource/dataipa/drivers/platform/msm \
     qcom/opensource/datarmnet/core \
     qcom/opensource/datarmnet-ext/aps \
@@ -119,6 +120,7 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/display-drivers/msm \
     qcom/opensource/video-driver \
     qcom/opensource/graphics-kernel \
+    qcom/opensource/wlan/platform \
     qcom/opensource/bt-kernel \
     qcom/opensource/wlan/qcacld-3.0/.adrastea \
     qcom/opensource/wlan/qcacld-3.0/.qca6750
