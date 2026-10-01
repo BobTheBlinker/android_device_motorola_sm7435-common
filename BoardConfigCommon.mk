@@ -103,6 +103,7 @@ BOOT_KERNEL_MODULES := $(sort \
     $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD) \
     $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD) \
     cfg80211.ko \
+    rfkill.ko \
     hdcp_qseecom_dlkm.ko \
     smmu_proxy_dlkm.ko \
     tz_log_dlkm.ko)
