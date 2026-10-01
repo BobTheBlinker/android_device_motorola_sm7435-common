@@ -103,6 +103,7 @@ BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD)
 TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/securemsm-kernel \
     qcom/opensource/mmrm-driver \
+    qcom/opensource/synx-kernel \
     qcom/opensource/mm-drivers/msm_ext_display \
     qcom/opensource/mm-drivers/sync_fence \
     qcom/opensource/audio-kernel \
