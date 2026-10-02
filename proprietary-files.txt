@@ -648,9 +648,9 @@ system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 # RIL
 vendor/app/IWlanService/IWlanService.apk
 vendor/bin/hw/qcrilNrd
-vendor/bin/adpl
+vendor/bin/adpl;DISABLE_CHECKELF
 vendor/bin/ks
-vendor/bin/netmgrd
+vendor/bin/netmgrd;DISABLE_CHECKELF
 vendor/bin/pd-mapper
 vendor/bin/port-bridge
 vendor/bin/qmi_motext_hook
