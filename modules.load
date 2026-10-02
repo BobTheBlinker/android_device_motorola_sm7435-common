@@ -196,7 +196,6 @@ wcd938x_dlkm.ko
 wcd938x_slave_dlkm.ko
 wcd937x_dlkm.ko
 wcd937x_slave_dlkm.ko
-aw882xx_dlkm.ko
 hdmi_dlkm.ko
 qcedev-mod_dlkm.ko
 qcrypto-msm_dlkm.ko
@@ -238,7 +237,6 @@ wcd938x_dlkm.ko
 wcd938x_slave_dlkm.ko
 wcd937x_dlkm.ko
 wcd937x_slave_dlkm.ko
-aw882xx_dlkm.ko
 hdmi_dlkm.ko
 btpower.ko
 radio-i2c-rtc6226-qca.ko

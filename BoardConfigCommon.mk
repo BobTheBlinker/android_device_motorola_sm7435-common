@@ -110,6 +110,7 @@ BOOT_KERNEL_MODULES := $(sort \
 
 TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/securemsm-kernel \
+    qcom/opensource/dsp-kernel \
     qcom/opensource/mmrm-driver \
     qcom/opensource/synx-kernel \
     qcom/opensource/mm-drivers/msm_ext_display \
